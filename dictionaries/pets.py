@@ -27,8 +27,8 @@ result = {
 
 result = {}
 for key in pets:
-        if key[1:] not in result: # if key not in result
-                result[key[1:]] = [key[0]] # add key and value to dictionary
+        if key[1:] not in result:
+                result[key[1]] = [key[0]]
         else: # if key in result
                 result[key[1:]].append(key[0])
 
