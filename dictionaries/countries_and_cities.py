@@ -10,8 +10,11 @@ for i in range(n):
 m = int(input())
 general_list = []
 for j in range(m):
-    test = input()
-    general_list.append(general_dict[test])
+    test = input().title()
+    if test.isalpha():
+        general_list.append(general_dict[test])
+    else:
+        None
 
 for el in general_list:
     print(el)
