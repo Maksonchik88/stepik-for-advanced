@@ -1,7 +1,7 @@
 n = int(input())
 general_dict = dict()
 for i in range(n):
-    my_list = input().split()
+    my_list = input().lower().split()
     val_list = my_list[0]
     key_list = my_list[1:]
     new_dict = dict.fromkeys(key_list, val_list)
@@ -10,12 +10,5 @@ for i in range(n):
 m = int(input())
 general_list = []
 for j in range(m):
-    test = input().title()
-    if test.isalpha():
-        general_list.append(general_dict[test])
-    else:
-        None
-
-for el in general_list:
-    print(el)
-
+    test = input().lower()
+    print(general_dict.get(test, 'Not found').title())
