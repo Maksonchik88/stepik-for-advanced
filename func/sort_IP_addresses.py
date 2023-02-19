@@ -1,10 +1,7 @@
-lst = []
-for i in range(int(input())):
-    st = tuple(map(int, input().split('.')))
-    lst.append(st)
+k = int(input())
+lst = [input() for _ in range(k)]
 
-lst_sort = list(sorted(lst, key=lambda st: (st[0], st[1], st[2], st[3])))
+lst_sort = list(sorted(lst, key=lambda st: tuple(map(int, st.split('.')))))
 
 for tp in lst_sort:
-    tp = '.'.join(map(str, tp))
     print(tp)
